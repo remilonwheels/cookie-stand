@@ -42,3 +42,15 @@ for (var i = 0; i < firstAndPike.cookiesPerHourArray.length; i++) {
   cookiesPerHour_liEl.textContent = liString;
   storeCookieList.appendChild(cookiesPerHour_liEl) ;
 }
+var totalCookies_liEl = document.createElement('li');
+
+totalCookies_liEl.textContent = 'Total: ' + sumArray(firstAndPike.cookiesPerHourArray) + ' cookies';
+storeCookieList.appendChild(totalCookies_liEl);
+
+function sumArray(array) {
+  var sum = 0;
+  for (var i = 0; i < array.length; i++) {
+    sum += array[i];
+  }
+  return sum;
+}
