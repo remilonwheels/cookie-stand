@@ -55,44 +55,44 @@ new Store('Capitol Hill', 20, 38, 2.3);
 new Store('Alki', 2, 16, 4.6);
 
 var cookiesSummaryTable = document.getElementById('tbl_allStores');
-
-
-//Create table header
-var trEl = document.createElement('tr');
-var thEl = document.createElement('th');
-trEl.appendChild(thEl);
-for (var i = 0; i < hours.length - 1; i++) {
-  thEl = document.createElement('th');
-  thEl.textContent = hours[i];
-  trEl.appendChild(thEl);
-}
-thEl = document.createElement('th');
-thEl.textContent = 'Daily Location Total';
-trEl.appendChild(thEl);
-cookiesSummaryTable.appendChild(trEl);
-
-//table data from stores
-for (i = 0; i < allStores.length; i++) {
+createTableHeader();
+for (var i = 0; i < allStores.length; i++) {
   allStores[i].render();
 }
+createTableFooter();
 
-//table footer
-trEl = document.createElement('tr');
-var tdEl = document.createElement('td');
-tdEl.textContent = 'Totals';
-trEl.appendChild(tdEl);
-for (i = 0; i < hours.length - 1; i++) {
-  tdEl = document.createElement('td');
-  tdEl.textContent = totalCookiesByHour[i];
+function createTableHeader() {
+  var trEl = document.createElement('tr');
+  var thEl = document.createElement('th');
+  trEl.appendChild(thEl);
+  for (var i = 0; i < hours.length - 1; i++) {
+    thEl = document.createElement('th');
+    thEl.textContent = hours[i];
+    trEl.appendChild(thEl);
+  }
+  thEl = document.createElement('th');
+  thEl.textContent = 'Daily Location Total';
+  trEl.appendChild(thEl);
+  cookiesSummaryTable.appendChild(trEl);
+}
+
+function createTableFooter() {
+  var trEl = document.createElement('tr');
+  var tdEl = document.createElement('td');
+  tdEl.textContent = 'Totals';
   trEl.appendChild(tdEl);
+  for (i = 0; i < hours.length - 1; i++) {
+    tdEl = document.createElement('td');
+    tdEl.textContent = totalCookiesByHour[i];
+    trEl.appendChild(tdEl);
+  }
+
+  for (i = 0; i < allStores.length; i++) {
+    allStoresCookieTotal += allStores[i].totalDailyCookies;
+  }
+
+  tdEl = document.createElement('td');
+  tdEl.textContent = allStoresCookieTotal;
+  trEl.appendChild(tdEl);
+  cookiesSummaryTable.appendChild(trEl);
 }
-
-for (i = 0; i < allStores.length; i++) {
-  allStoresCookieTotal += allStores[i].totalDailyCookies;
-}
-
-
-tdEl = document.createElement('td');
-tdEl.textContent = allStoresCookieTotal;
-trEl.appendChild(tdEl);
-cookiesSummaryTable.appendChild(trEl);
