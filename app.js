@@ -58,7 +58,6 @@ var cookiesSummaryTable = document.getElementById('tbl_allStores');
 
 
 //Create table header
-//    Create empty cell in table header
 var trEl = document.createElement('tr');
 var thEl = document.createElement('th');
 trEl.appendChild(thEl);
@@ -70,13 +69,14 @@ for (var i = 0; i < hours.length - 1; i++) {
 thEl = document.createElement('th');
 thEl.textContent = 'Daily Location Total';
 trEl.appendChild(thEl);
-
 cookiesSummaryTable.appendChild(trEl);
 
+//table data from stores
 for (i = 0; i < allStores.length; i++) {
   allStores[i].render();
 }
 
+//table footer
 trEl = document.createElement('tr');
 var tdEl = document.createElement('td');
 tdEl.textContent = 'Totals';
