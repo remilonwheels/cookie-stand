@@ -121,6 +121,17 @@ function handleAddStore(event) {
     return alert('Min/max customer and avg order fields must be numbers');
   }
 
+  for (var i = 0; i < allStores.length; i++) {
+    if (storeName.toLowerCase() === allStores[i].locationName.toLowerCase()) {
+      allStores[i].minCustPerHour = minCust;
+      allStores[i].maxCustPerHour = maxCust;
+      allStores[i].avgCookiesPerCust = avgOrder;
+      updateTable();
+      return;
+    }
+  }
+
+
   new Store(storeName, minCust, maxCust, avgOrder);
 
   updateTable();
