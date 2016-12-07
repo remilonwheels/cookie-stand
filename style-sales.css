@@ -1,3 +1,15 @@
+* {
+  border: 1px dotted orange;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+tr {
+  margin: 0;
+}
+
 td {
   text-align: center;
   border: 1px solid #000000;
