@@ -56,9 +56,7 @@ new Store('Alki', 2, 16, 4.6);
 
 var cookiesSummaryTable = document.getElementById('tbl_allStores');
 createTableHeader();
-for (var i = 0; i < allStores.length; i++) {
-  allStores[i].render();
-}
+createTableRows();
 createTableFooter();
 
 function createTableHeader() {
@@ -76,12 +74,19 @@ function createTableHeader() {
   cookiesSummaryTable.appendChild(trEl);
 }
 
+function createTableRows() {
+  for (var i = 0; i < allStores.length; i++) {
+    allStores[i].render();
+  }
+}
+
 function createTableFooter() {
+  console.log('enterting footer function');
   var trEl = document.createElement('tr');
   var tdEl = document.createElement('td');
   tdEl.textContent = 'Totals';
   trEl.appendChild(tdEl);
-  for (i = 0; i < hours.length - 1; i++) {
+  for (var i = 0; i < hours.length - 1; i++) {
     tdEl = document.createElement('td');
     tdEl.textContent = totalCookiesByHour[i];
     trEl.appendChild(tdEl);
