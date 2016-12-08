@@ -74,7 +74,7 @@ function createTableHeader() {
     trEl.appendChild(thEl);
   }
   thEl = document.createElement('th');
-  thEl.textContent = 'Daily Location Total';
+  thEl.textContent = 'Total';
   trEl.appendChild(thEl);
   cookiesSummaryTable.appendChild(trEl);
 }
@@ -88,7 +88,7 @@ function createTableRows() {
 function createTableFooter() {
   var trEl = document.createElement('tr');
   var thEl = document.createElement('th');
-  thEl.textContent = 'Totals';
+  thEl.textContent = 'Total';
   trEl.appendChild(thEl);
   for (var i = 0; i < hours.length - 1; i++) {
     thEl = document.createElement('th');

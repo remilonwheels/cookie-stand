@@ -1,27 +1,59 @@
+/*rich black #050517
+dark coral #cf5c36
+pale gold #efc88b
+wheat #f4e3b2
+light gray #d3d5d7*/
+
 * {
   /*border: 1px dotted orange;*/
 }
 
+form {
+  margin-bottom: 20px;
+  margin: 0px auto 20px auto;
+  max-width: 800px;
+}
+
 table {
   border-collapse: collapse;
+  margin: 0px auto;
 }
 
-tr {
-  margin: 0;
+tr:first-child, tr:last-child {
+  background-color: #f4e3b2;
 }
 
-tr:first-child {
+th:first-child {
   text-align: left;
 }
+
 
 td {
   text-align: center;
   border-top: 1px solid #000000;
   border-bottom: 1px solid #000000;
+
 }
 
 th {
-  padding: 0 10px;
+  padding: 10px 10px;
   border-top: 1px solid #000000;
   border-bottom: 1px solid #000000;
+}
+
+fieldset {
+  border: 3px solid #000000;
+}
+
+button {
+  background-color: #050517;
+  border: none;
+  color: white;
+  padding: 5px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  border-radius: 4px;
+  margin: 10px auto 0px auto;
 }
