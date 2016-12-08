@@ -6,7 +6,28 @@
     <link rel="stylesheet" type="text/css" href="style-sales.css">
   </head>
   <body>
-    <h2>Cookies Needed By Location Each Day</h2>
+    <h2>Sales Projections</h2>
+
+    <form id="form_addStore">
+      <fieldset>
+        <legend>Add Store</legend>
+
+        <label for="input_storeName">Name: </label>
+        <input name="input_storeName" type="text" />
+
+        <label for="input_minCust">Min: </label>
+        <input name="input_minCust" type="text"/>
+
+        <label for="input_maxCust">Max: </label>
+        <input name="input_maxCust" type="text"/>
+
+        <label for="input_avgOrder">Avg: </label>
+        <input name="input_avgOrder" type="text"/>
+
+        <button type="submit">Submit</button>
+      </fieldset>
+    </form>
+
     <table id="tbl_allStores"></table>
 
     <script src="app.js"></script>
