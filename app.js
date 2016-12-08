@@ -15,7 +15,6 @@ function Store(locationName, minCustPerHour, maxCustPerHour, avgCookiesPerCust) 
   this.avgCookiesPerCust = avgCookiesPerCust;
   this.cookiesPerHourArray = [];
   this.totalDailyCookies = 0;
-
   allStores.push(this);
 }
 
@@ -52,6 +51,13 @@ Store.prototype.render = function() {
 
   cookiesSummaryTable.appendChild(trEl);
 };
+
+new Store('First and Pike', 23, 65, 6.3);
+new Store('Seatac Airport', 3, 24, 1.2);
+new Store('Seattle Center', 11, 38, 3.7);
+new Store('Capitol Hill', 20, 38, 2.3);
+new Store('Alki', 2, 16, 4.6);
+
 
 function updateTable() {
   cookiesSummaryTable.innerHTML = '';
@@ -117,8 +123,8 @@ function handleAddStore(event) {
     return alert('Please fill-in all boxes');
   }
 
-  if (isNaN(minCust) || isNaN(maxCust) || isNaN(avgOrder)) {
-    return alert('Min/max customer and avg order fields must be numbers');
+  if ((minCust % 1 !== 0) || (maxCust % 1 !== 0) || (avgOrder % 1 !== 0)) {
+    return alert('Min/max customer and avg order fields must be integers');
   }
 
   for (var i = 0; i < allStores.length; i++) {
@@ -131,18 +137,10 @@ function handleAddStore(event) {
     }
   }
 
-
   new Store(storeName, minCust, maxCust, avgOrder);
-
   updateTable();
 }
 
 formAddStore.addEventListener('submit', handleAddStore);
-
-new Store('First and Pike', 23, 65, 6.3);
-new Store('Seatac Airport', 3, 24, 1.2);
-new Store('Seattle Center', 11, 38, 3.7);
-new Store('Capitol Hill', 20, 38, 2.3);
-new Store('Alki', 2, 16, 4.6);
 
 updateTable();
