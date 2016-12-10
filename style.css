@@ -4,11 +4,16 @@ pale gold #efc88b
 wheat #f4e3b2
 light gray #d3d5d7*/
 
+
+
 * {
   /*outline: 1px dotted red;*/
   margin: 0;
   color: #050517;
+  font-family: "Proxima Nova", serif;
 }
+
+
 
 body {
   background-color: #d3d5d7;
@@ -25,13 +30,15 @@ header {
 }
 
 #hdr-left, #hdr-right {
-  width: 300px;
+  width: 200px;
   height: 80px;
 }
 
 #hdr-middle {
-  width: 200px;
+  width: 400px;
   height: 80px;
+  font-family: 'Aref Ruqaa', serif;
+  text-align: center;
 }
 
 header > div {
@@ -49,10 +56,20 @@ header > div {
   height: 80px;
 }
 
+#login {
+  margin: 0;
+}
+
+#login img {
+  width: 20px;
+  padding: 10px;
+}
+
 #hdr-logo-right {
-  float: right;
-  height: 40px;
-  margin: 40px 10px 0px 0px;
+  height: 30px;
+  position: absolute;
+  margin-left: 100px;
+  margin-top: -5px;
 }
 
 #navbar {
@@ -61,6 +78,7 @@ header > div {
   height: 35px;
   padding: 0;
   background-color: #efc88b;
+  font-family: "Proxima Nova", serif;
 }
 
 #menu-photo {
@@ -80,6 +98,8 @@ header > div {
 
 li img {
   /*position: absolute;*/
+  margin: 0;
+  height: 40px;
 }
 
 #main-section {
@@ -88,13 +108,25 @@ li img {
   height: 360px;
   float: left;
   z-index: -1;
+  font-family: Garamond, sans-serif;
+}
+
+#main-section h2 {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 50px;
+}
+
+#main-section p {
+  margin: 30px 70px 0px 70px;
+  line-height: 30px;
 }
 
 #main-section img {
   width: 650px;
   height: 360px;
   opacity: .15;
-  z-index: -1;
+  position: absolute;
 }
 
 aside {
@@ -122,6 +154,7 @@ footer {
   height: 80px;
   color: white;
   z-index: 1;
+  font-family: "Proxima Nova", serif;
 }
 
 #footer-left, #footer-right {
