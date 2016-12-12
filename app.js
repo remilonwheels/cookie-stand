@@ -138,6 +138,12 @@ function handleAddStore(event) {
   }
 
   new Store(storeName, minCust, maxCust, avgOrder);
+
+  event.target.input_storeName.value = null;
+  event.target.input_minCust.value = null;
+  event.target.input_maxCust.value = null;
+  event.target.input_avgOrder.value = null;
+
   updateTable();
 }
 
