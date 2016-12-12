@@ -4,16 +4,11 @@ pale gold #efc88b
 wheat #f4e3b2
 light gray #d3d5d7*/
 
-
-
 * {
-  /*outline: 1px dotted red;*/
   margin: 0;
   color: #050517;
   font-family: "Proxima Nova", serif;
 }
-
-
 
 body {
   background-color: #d3d5d7;
@@ -29,6 +24,7 @@ body {
   max-width: 1000px;
   margin: 20px auto 20px auto;
   background-color: white;
+  padding-bottom: 40px;
 }
 
 header {
@@ -38,6 +34,9 @@ header {
 header h1 {
   font-size: 30px;
   padding-top: 20px;
+  font-family: 'Aref Ruqaa', serif;
+  color: #cf5c36;
+
 }
 
 #hdr-left, #hdr-right {
@@ -54,11 +53,6 @@ header h1 {
 
 header > div {
   float: left;
-}
-
-#hdr-middle {
-  /*vertical-align: middle;*/
-  /*text-align: center;*/
 }
 
 #hdr-logo-left {
@@ -203,10 +197,11 @@ form {
   max-width: 800px;
 }
 
-table {
+#tbl_allStores {
   border-collapse: collapse;
   margin: 0px auto;
   background-color: white;
+  font-family: Garamond, sans-serif;
 }
 
 tr:first-child, tr:last-child {
@@ -222,6 +217,8 @@ td {
   text-align: center;
   border-top: 1px solid #000000;
   border-bottom: 1px solid #000000;
+  color: #564133;
+  font-family: Garamond, sans-serif;;
 
 }
 
@@ -229,10 +226,15 @@ th {
   padding: 10px 10px;
   border-top: 1px solid #000000;
   border-bottom: 1px solid #000000;
+  color: #564133;
+  font-family: Garamond, sans-serif;;
 }
 
 fieldset {
   border: 3px solid #000000;
+  max-width: 800px;
+  margin: 0px auto 0px auto;
+
 }
 
 .input-num {
@@ -257,5 +259,6 @@ button {
 }
 
 #submit-button {
-  /*margin: 0px auto 0px auto;*/
+  clear: both;
+  margin: 0 auto;
 }
